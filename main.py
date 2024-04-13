@@ -9,12 +9,12 @@ class Game:
         self.screen =  pygame.display.set_mode((WIDTH, HEIGHT))
         self.clock = pygame.time.Clock()
         self.running = True
+        self.all_sprites = pygame.sprite.LayeredUpdates()
+        self.blocks = pygame.sprite.LayeredUpdates()
 
     def new(self):
         self.createTileMap()
         self.playing = True
-        self.all_sprites = pygame.sprite.LayeredUpdates()
-        self.blocks = pygame.sprite.LayeredUpdates()
         self.attacks = pygame.sprite.LayeredUpdates()
 
     def events(self):
